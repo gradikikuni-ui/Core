@@ -497,12 +497,12 @@
   box-shadow:0 30px 70px -40px rgba(26,79,214,0.45);
 }
 .contact-form{position:relative; z-index:1; display:flex; flex-direction:column; gap:8px;}
-.contact-form input, .contact-form textarea{
+.contact-form input, .contact-form textarea, .contact-form select{
   background:#fff; border:1px solid var(--border); border-radius:10px;
   padding:13px 16px; color:var(--text); font-family:var(--font-body); font-size:0.94rem;
   transition:border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba(26,79,214,0.12);}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus{outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba(26,79,214,0.12);}
 .contact-form textarea{resize:vertical; min-height:120px;}
 .contact-form label{font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); margin:8px 0 -2px;}
 .form-error{font-size:0.78rem; color:#b42318; font-family:var(--font-mono);}
@@ -547,4 +547,47 @@ footer{position:relative; z-index:2; padding:44px 0; background:var(--glass-stro
   .stack-grid{grid-template-columns:1fr;}
   .hero-stats{grid-template-columns:1fr; gap:18px;}
   .carousel-item{flex-basis:82%;}
+}
+
+/* ==========================================================================
+   CARRIÈRES — page poste (modèle commun) + candidature
+   ========================================================================== */
+.contact-form select{cursor:pointer;}
+.back-link{
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:28px;
+  font-size:0.88rem; font-weight:600; color:var(--muted); transition:color 0.2s ease;
+}
+.back-link:hover{color:var(--blue);}
+.page-hero h1.role-title{display:flex; align-items:center; gap:16px;}
+.page-hero h1.role-title .icon-plain{width:44px; height:44px;}
+.page-hero .tag-row{margin-top:22px;}
+
+.detail{padding:30px 0 120px;}
+.detail-grid{display:grid; grid-template-columns:1.5fr 0.8fr; gap:48px; align-items:start;}
+.detail-main{display:flex; flex-direction:column; gap:44px;}
+.detail-block h2{font-family:var(--font-display); font-size:1.35rem; font-weight:600; margin:0 0 18px; color:var(--ink);}
+.check-list{display:flex; flex-direction:column; gap:14px;}
+.check-list li{display:flex; align-items:flex-start; gap:12px; font-size:0.98rem; line-height:1.5; color:var(--text);}
+.check-list svg{color:var(--blue); flex-shrink:0; margin-top:3px;}
+.detail-block .tech-grid{margin-top:0;}
+
+.detail-aside{
+  position:sticky; top:110px; display:flex; flex-direction:column; align-items:flex-start; gap:14px;
+  padding:30px 28px; border:1px solid var(--border); border-radius:20px; background:var(--glass-strong);
+  -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  box-shadow:0 30px 70px -40px rgba(26,79,214,0.45);
+}
+.detail-aside h3{font-family:var(--font-display); font-size:1.2rem; font-weight:600; margin:0; color:var(--ink);}
+.detail-aside p{margin:0; color:var(--muted); font-size:0.93rem;}
+.detail-aside .btn{width:100%;}
+.other-roles{width:100%; margin-top:10px; padding-top:18px; border-top:1px solid var(--border);}
+.other-roles span{display:block; margin-bottom:10px; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--faint);}
+.other-roles a{display:flex; align-items:center; gap:10px; padding:10px 0; font-size:0.92rem; font-weight:500; color:var(--ink); transition:color 0.2s ease;}
+.other-roles a:hover{color:var(--blue);}
+.other-roles a svg:first-child{color:var(--blue);}
+.other-roles a svg:last-child{margin-left:auto;}
+
+@media (max-width:900px){
+  .detail-grid{grid-template-columns:1fr;}
+  .detail-aside{position:static;}
 }
