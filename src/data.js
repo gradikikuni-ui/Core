@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 export const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-export const FIELD_LIMITS = { name: 80, email: 120, message: 2000 };
+export const FIELD_LIMITS = { name: 80, email: 120, message: 2000, link: 200 };
 
 /* ------------------------------------------------------------------ */
 /* Logos des technologies (Devicon, servis par jsDelivr, version figée) */
@@ -297,7 +297,9 @@ export const WHY_US = [
   },
 ];
 
-/* Profils recherchés — à adapter à vos vrais besoins de recrutement */
+/* Profils recherchés — contenu à adapter à vos vrais besoins de recrutement.
+   Chaque entrée alimente la même page modèle : /careers/:id
+   (l'id ne doit jamais être "apply", réservé à la page de candidature). */
 export const CAREERS = [
   {
     id: "fullstack",
@@ -305,7 +307,28 @@ export const CAREERS = [
     title: "Développeur Full-Stack",
     description:
       "Concevoir et livrer des applications web et des plateformes SaaS de bout en bout.",
+    tagline:
+      "Vous prenez en charge un produit web de l'interface à la base de données, aux côtés d'une équipe technique polyvalente.",
     tags: ["React", "C# / .NET", "Node.js"],
+    missions: [
+      "Développer des interfaces web modernes avec React",
+      "Concevoir des APIs et des services backend (C# / .NET, Node.js)",
+      "Modéliser et optimiser des bases de données",
+      "Participer aux choix d'architecture et aux revues de code",
+      "Accompagner la mise en ligne et l'évolution des produits",
+    ],
+    profile: [
+      "Solide maîtrise de JavaScript / TypeScript et de React",
+      "Expérience sur au moins un backend (.NET, Node.js ou Python)",
+      "Bonnes bases en SQL et en conception d'API",
+      "Autonomie et sens de la qualité du code",
+    ],
+    nice: [
+      "Redux ou Angular",
+      "Docker et notions de déploiement cloud",
+      "Expérience SaaS (abonnements, rôles, paiements)",
+    ],
+    stack: ["React", "Redux", "TypeScript", "C#", ".NET", "Node.js", "PostgreSQL", "Docker"],
   },
   {
     id: "mobile",
@@ -313,7 +336,28 @@ export const CAREERS = [
     title: "Développeur Mobile",
     description:
       "Créer des applications Android et iOS modernes, fluides et fiables.",
+    tagline:
+      "Vous concevez des applications mobiles intuitives, de la première maquette à la publication sur les stores.",
     tags: ["React Native", "TypeScript", "API"],
+    missions: [
+      "Développer des applications Android et iOS avec React Native",
+      "Intégrer les APIs et les services backend de nos projets",
+      "Soigner la performance, la fluidité et l'expérience utilisateur",
+      "Préparer la publication sur l'App Store et Google Play",
+      "Assurer la maintenance et les évolutions des applications livrées",
+    ],
+    profile: [
+      "Bonne pratique de React Native (ou de React solide, prêt à s'y spécialiser)",
+      "Maîtrise de TypeScript",
+      "Sensibilité aux usages et aux contraintes du mobile",
+      "Rigueur dans les tests et le suivi des bugs",
+    ],
+    nice: [
+      "Redux ou gestion d'état avancée",
+      "Notifications push, paiements intégrés",
+      "Expérience de publication sur les stores",
+    ],
+    stack: ["React Native", "TypeScript", "Redux", "Node.js", "PostgreSQL"],
   },
   {
     id: "ai",
@@ -321,7 +365,28 @@ export const CAREERS = [
     title: "Ingénieur IA",
     description:
       "Intégrer des modèles de langage et de l'automatisation dans des produits réels.",
+    tagline:
+      "Vous transformez des modèles d'IA en fonctionnalités utiles, intégrées dans de vrais produits numériques.",
     tags: ["LLM", "NLP", "Python"],
+    missions: [
+      "Intégrer des modèles LLM dans des applications web et mobiles",
+      "Concevoir des assistants conversationnels et des chatbots",
+      "Mettre en place de la recherche intelligente et du traitement du langage (NLP)",
+      "Automatiser des processus métier grâce à l'IA",
+      "Évaluer la qualité et la fiabilité des résultats produits",
+    ],
+    profile: [
+      "Très bonne maîtrise de Python",
+      "Expérience avec des LLM et leurs APIs",
+      "Bases solides en NLP et en analyse de données",
+      "Esprit critique sur l'évaluation des modèles",
+    ],
+    nice: [
+      "Docker et déploiement cloud",
+      "Intégration d'IA dans des applications existantes",
+      "Sensibilité produit : savoir quand l'IA apporte une vraie valeur",
+    ],
+    stack: ["Python", "LLM", "NLP", "Modèles d'IA", "Docker", "PostgreSQL"],
   },
 ];
 

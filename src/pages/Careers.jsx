@@ -28,7 +28,11 @@ export default function Careers() {
             {CAREERS.map((role) => {
               const Icon = role.icon;
               return (
-                <div className="value-card spot reveal" key={role.id}>
+                <Link
+                  to={`/careers/${role.id}`}
+                  className="value-card spot reveal"
+                  key={role.id}
+                >
                   <Icon className="icon-plain" aria-hidden="true" />
                   <h4>{role.title}</h4>
                   <p className="card-text">{role.description}</p>
@@ -37,10 +41,10 @@ export default function Careers() {
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="card-link">
-                    Postuler <ArrowRight size={16} aria-hidden="true" />
-                  </Link>
-                </div>
+                  <span className="card-link">
+                    Voir le poste <ArrowRight size={16} aria-hidden="true" />
+                  </span>
+                </Link>
               );
             })}
           </div>
@@ -77,7 +81,7 @@ export default function Careers() {
               quelques lignes et dites-nous ce que vous aimeriez construire.
             </p>
             <div className="hero-ctas">
-              <Link to="/contact" className="btn btn-primary">
+              <Link to="/careers/apply" className="btn btn-primary">
                 Candidature spontanée
               </Link>
               <Link to="/about" className="btn btn-ghost">
